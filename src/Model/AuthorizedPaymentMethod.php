@@ -172,17 +172,18 @@ class AuthorizedPaymentMethod implements ModelInterface, ArrayAccess, \JsonSeria
         return self::$openAPIModelName;
     }
 
-    const TYPE_INVOICE = 'invoice';
-    const TYPE_FIXED_AMOUNT = 'fixed_amount';
-    const TYPE_BASE_ACCOUNT = 'base_account';
-    const TYPE_DEFERRED_INTEREST = 'deferred_interest';
-    const TYPE_DIRECT_DEBIT = 'direct_debit';
-    const TYPE_DIRECT_BANK_TRANSFER = 'direct_bank_transfer';
-    const TYPE_B2B_INVOICE = 'b2b_invoice';
-    const TYPE_CARD = 'card';
-    const TYPE_SLICE_IT_BY_CARD = 'slice_it_by_card';
-    const TYPE_PAY_LATER_BY_CARD = 'pay_later_by_card';
-    const TYPE_FIXED_SUM_CREDIT = 'fixed_sum_credit';
+ public const TYPE_INVOICE = 'invoice';
+    public const TYPE_FIXED_AMOUNT = 'fixed_amount';
+    public const TYPE_BASE_ACCOUNT = 'base_account';
+    public const TYPE_DIRECT_DEBIT = 'direct_debit';
+    public const TYPE_DIRECT_BANK_TRANSFER = 'direct_bank_transfer';
+    public const TYPE_B2B_INVOICE = 'b2b_invoice';
+    public const TYPE_CARD = 'card';
+    public const TYPE_SLICE_IT_BY_CARD = 'slice_it_by_card';
+    public const TYPE_PAY_LATER_BY_CARD = 'pay_later_by_card';
+    public const TYPE_PAY_BY_CARD = 'pay_by_card';
+    public const TYPE_FIXED_SUM_CREDIT = 'fixed_sum_credit';
+    public const TYPE_ALTERNATIVE_PAYMENT_METHOD = 'alternative_payment_method';
 
     /**
      * Gets allowable values of the enum
@@ -192,17 +193,18 @@ class AuthorizedPaymentMethod implements ModelInterface, ArrayAccess, \JsonSeria
     public function getTypeAllowableValues()
     {
         return [
-            self::TYPE_INVOICE,
+              self::TYPE_INVOICE,
             self::TYPE_FIXED_AMOUNT,
             self::TYPE_BASE_ACCOUNT,
-            self::TYPE_DEFERRED_INTEREST,
             self::TYPE_DIRECT_DEBIT,
             self::TYPE_DIRECT_BANK_TRANSFER,
             self::TYPE_B2B_INVOICE,
             self::TYPE_CARD,
             self::TYPE_SLICE_IT_BY_CARD,
             self::TYPE_PAY_LATER_BY_CARD,
+            self::TYPE_PAY_BY_CARD,
             self::TYPE_FIXED_SUM_CREDIT,
+            self::TYPE_ALTERNATIVE_PAYMENT_METHOD,
         ];
     }
 
